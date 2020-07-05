@@ -77,24 +77,22 @@ void borrarArbol(TNTree* a){
         borrarArbol(&((*a)->hijo));
         free(*a);
     }
-    a=NULL;
+    *a=NULL;
 }
 
 TNodeNTree* copiarNodo(TNodeNTree* original, TNodeNTree* padre){
     // Info
-    TElemento* info =&(original->info);
+    TElemento* info =crear(original->info.info);
     // Creamos la copia del elemento
     TNodeNTree* nuevo =crearNodo( padre, *info);
     if(!esArbolVacio(original-> hermano)){
         // Tengo que copiar el hemano
-        TNodeNTree *hermano = NULL;
-        copiarNodo(original->hermano, hermano);
+        TNodeNTree *hermano = copiarNodo(original->hermano, hermano);
         nuevo->hermano=hermano;
     }
     if(!esArbolVacio(original-> hijo)){
         // Tengo que copiar el hemano
-        TNodeNTree* hijo = NULL;
-        copiarNodo(original->hijo, hijo);
+        TNodeNTree* hijo = copiarNodo(original->hijo, hijo);
         nuevo->hijo=hijo;
     }
     return nuevo;
@@ -113,23 +111,26 @@ int esArbolVacio(TNTree a){
     return (a)==NULL;
 }
 int numeroHojas(TNTree a){
+    printf("%s\n",a->info.info);
     if (esArbolVacio(a)){
         return 0;
-    }else if (a->hijo==NULL){
-        return 1;
     }else{
-        int hojasHijo;
-        int hojasHermano;
-        hojasHijo=numeroHojas(a->hijo);
-        hojasHermano=a->hijo->hermano!=NULL ? numeroHojas(a->hijo->hermano):0;
-        return hojasHijo+hojasHermano;
+        int hojasHermano=a->hermano!=NULL ? numeroHojas(a->hermano):0;
+        int hojasHijos=a->hijo!=NULL ? numeroHojas(a->hijo):0;
+        if (a->hijo==NULL){
+            hojasHijos=1;
+            printf("_____%s\n",a->info.info);
+        }
+        return hojasHijos+hojasHermano;
     }
 }
 int numeroNodos(TNTree a){
     if (esArbolVacio(a)){
         return 0;
     }else{
-        return 1 + numeroNodos(a->hijo)+ numeroNodos(a->hermano);
+        int numeroDescendientes = numeroNodos(a->hijo);
+        int numeroSobrinos = numeroNodos(a->hermano);
+        return 1 + numeroDescendientes+ numeroSobrinos;
     }
 }
 //  A

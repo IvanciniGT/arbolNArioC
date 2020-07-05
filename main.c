@@ -7,58 +7,8 @@
 int main(){
 
     TNTree a=crearArbolVacio(&a);
-//    TNTree b=crearArbolVacio(&b);
-    //crearArbolVacio(&a);
-    //crearArbolVacio(&b);
-    TElemento Alfonso = *crear("Alfonso");
-    anadirRaiz(&a, Alfonso);
-    TNodeNTree* nodo=buscarNodo(a, Alfonso);
-    //print(nodo->info);
-    TElemento Miguel = *crear("Miguel");
-    anadirHijo(&a, Alfonso, Miguel);
-    TElemento Lucas = *crear("Lucas");
-    anadirHermano(&a, Miguel, Lucas);
-    TElemento Gestrudis = *crear("Gertrudis");
-    anadirHijo(&a, Miguel, Gestrudis);
-
-
-/*
-    TNodeNTree* nodo2=buscarNodo(a, Miguel);
-    print(nodo2->info);
-    print(nodo2->padre->info);
-    print(nodo2->hermano->info);
-    TNodeNTree* nodo3=buscarNodo(a, Lucas);
-    print(nodo3->info);
-    print(nodo3->padre->info);
-    printf("\nNulo: %s\n",nodo3->hermano);
-    printf("\nHojas: %i\n",numeroHojas(a));
-    printf("\nNodos: %i\n",numeroNodos(a));
-    printf("\nAltura: %i\n",altura(a));
-    print(*parent(a,Gestrudis));
-
-    TLinkedList lista=listaHijos(a, Alfonso);
-    mostrar(lista);
-
-
-
-    lista=listaHermanos(a, Miguel);
-    mostrar(lista);
-
-
-    lista=listaHermanos(a, Lucas);
-    mostrar(lista);
-
-*/
-
-
-//    TLinkedList lista = recorrido(a);
-//    mostrar(lista);
-    borrarNodo(&a,Miguel);
-    TLinkedList lista = recorrido(a);
-
-    mostrar(lista);
-    /*
- * TElemento Alfonso = *crear("Alfonso");
+    TNTree b=crearArbolVacio(&b);
+     TElemento Alfonso = *crear("Alfonso");
     TElemento Miguel = *crear("Miguel");
     TElemento Simon = *crear("Simon");
     TElemento Ana = *crear("Ana");
@@ -93,62 +43,20 @@ int main(){
     TElemento Marcos = *crear("Marcos");
     TElemento Teresa = *crear("Teresa");
 
-    /*TElemento Pepe, Alfonso, Miguel, Simon, Ana, Jeremias, Alberto, Irene, Gema, Angel, Luis, Felipe, Jesus, Maria, Lucia, Andres, Christian, Daniel, Susana, Pedro, Iker, Patricia, Joel, Laura, Esther, Guadalupe, Emilio, Juan, Roberto, Cesar, Silvia, Paloma, Blanca, Marcos, Teresa;
-
-    Pepe = *crear("Pepe");
-    Alfonso = *crear("Alfonso");
-    Miguel = *crear("Miguel");
-    Simon = *crear("Simon");
-    Ana = *crear("Ana");
-    Jeremias = *crear("Jeremias");
-    Alberto = *crear("Alberto");
-    Irene = *crear("Irene");
-    Gema = *crear("Gema");
-    Angel = *crear("Angel");
-    Luis = *crear("Luis");
-    Felipe = *crear("Felipe");
-    Jesus = *crear("Jesus");
-    Maria = *crear("Maria");
-    Lucia = *crear("Lucia");
-    Andres = *crear("Andres");
-    Christian = *crear("Christian");
-    Daniel = *crear("Daniel");
-    Susana = *crear("Susana");
-    Pedro = *crear("Pedro");
-    Iker = *crear("Iker");
-    Patricia = *crear("Patricia");
-    Joel = *crear("Joel");
-    Laura = *crear("Laura");
-    Esther = *crear("Esther");
-    Guadalupe = *crear("Guadalupe");
-    Emilio = *crear("Emilio");
-    Juan = *crear("Juan");
-    Roberto = *crear("Roberto");
-    Cesar = *crear("Cesar");
-    Silvia = *crear("Silvia");
-    Paloma = *crear("Paloma");
-    Blanca = *crear("Blanca");
-    Marcos = *crear("Marcos");
-    Teresa = *crear("Teresa");
-
-
     TLinkedList lista1, lista2, lista3, lista4;
-/*
     anadirRaiz(&a, Alfonso);
     anadirHijo(&a, Alfonso, Miguel);
     anadirHermano(&a, Miguel, Jeremias);
     anadirHermano(&a, Miguel, Susana);
     anadirHermano(&a, Miguel, Laura);
-    anadirHermano(&a, Miguel, Pepe);
-    borrarNodo(&a, Pepe);
     copiarArbol(a, &b);
     borrarArbol(&a);
     printf("%d", esArbolVacio(a));
     anadirHijo(&b, Miguel, Simon);
     anadirHijo(&b, Simon, Ana);
     anadirHijo(&b, Jeremias, Alberto);
-    anadirHermano(&a, Alberto, Jesus);
-    anadirHermano(&a, Alberto, Maria);
+    anadirHermano(&b, Alberto, Jesus);
+    anadirHermano(&b, Alberto, Maria);
     anadirHijo(&b, Alberto, Irene);
     anadirHijo(&b, Alberto, Felipe);
     anadirHijo(&b, Irene, Gema);
@@ -173,7 +81,7 @@ int main(){
     anadirHijo(&b, Roberto, Blanca);
     anadirHijo(&b, Roberto, Marcos);
     anadirHijo(&b, Silvia, Teresa);
-    printf("%d", numeroHojas(b));
+    printf("__%d__", numeroHojas(b));
     printf("%d", numeroNodos(b));
     printf("%d", altura(b));
     TElemento e;
@@ -197,5 +105,5 @@ int main(){
     copiar(recorrido(b), &lista4);
     mostrar(lista4);
     
-*/
+
 }
