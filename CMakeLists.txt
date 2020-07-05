@@ -3,4 +3,4 @@ project(untitled)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(untitled main.c NTree.c TElemento.c simplelinkedlist.c)
+add_executable(untitled main.c lista.c TElemento.c NTree.c)

@@ -70,18 +70,18 @@ CMakeFiles/untitled.dir/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/untitled.dir/main.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/usuario/CLionProjects/untitled/main.c -o CMakeFiles/untitled.dir/main.c.s
 
-CMakeFiles/untitled.dir/NTree.c.o: CMakeFiles/untitled.dir/flags.make
-CMakeFiles/untitled.dir/NTree.c.o: ../NTree.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/usuario/CLionProjects/untitled/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/untitled.dir/NTree.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/untitled.dir/NTree.c.o   -c /home/usuario/CLionProjects/untitled/NTree.c
+CMakeFiles/untitled.dir/lista.c.o: CMakeFiles/untitled.dir/flags.make
+CMakeFiles/untitled.dir/lista.c.o: ../lista.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/usuario/CLionProjects/untitled/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/untitled.dir/lista.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/untitled.dir/lista.c.o   -c /home/usuario/CLionProjects/untitled/lista.c
 
-CMakeFiles/untitled.dir/NTree.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/untitled.dir/NTree.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/usuario/CLionProjects/untitled/NTree.c > CMakeFiles/untitled.dir/NTree.c.i
+CMakeFiles/untitled.dir/lista.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/untitled.dir/lista.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/usuario/CLionProjects/untitled/lista.c > CMakeFiles/untitled.dir/lista.c.i
 
-CMakeFiles/untitled.dir/NTree.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/untitled.dir/NTree.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/usuario/CLionProjects/untitled/NTree.c -o CMakeFiles/untitled.dir/NTree.c.s
+CMakeFiles/untitled.dir/lista.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/untitled.dir/lista.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/usuario/CLionProjects/untitled/lista.c -o CMakeFiles/untitled.dir/lista.c.s
 
 CMakeFiles/untitled.dir/TElemento.c.o: CMakeFiles/untitled.dir/flags.make
 CMakeFiles/untitled.dir/TElemento.c.o: ../TElemento.c
@@ -96,33 +96,33 @@ CMakeFiles/untitled.dir/TElemento.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/untitled.dir/TElemento.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/usuario/CLionProjects/untitled/TElemento.c -o CMakeFiles/untitled.dir/TElemento.c.s
 
-CMakeFiles/untitled.dir/simplelinkedlist.c.o: CMakeFiles/untitled.dir/flags.make
-CMakeFiles/untitled.dir/simplelinkedlist.c.o: ../simplelinkedlist.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/usuario/CLionProjects/untitled/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/untitled.dir/simplelinkedlist.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/untitled.dir/simplelinkedlist.c.o   -c /home/usuario/CLionProjects/untitled/simplelinkedlist.c
+CMakeFiles/untitled.dir/NTree.c.o: CMakeFiles/untitled.dir/flags.make
+CMakeFiles/untitled.dir/NTree.c.o: ../NTree.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/usuario/CLionProjects/untitled/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/untitled.dir/NTree.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/untitled.dir/NTree.c.o   -c /home/usuario/CLionProjects/untitled/NTree.c
 
-CMakeFiles/untitled.dir/simplelinkedlist.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/untitled.dir/simplelinkedlist.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/usuario/CLionProjects/untitled/simplelinkedlist.c > CMakeFiles/untitled.dir/simplelinkedlist.c.i
+CMakeFiles/untitled.dir/NTree.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/untitled.dir/NTree.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/usuario/CLionProjects/untitled/NTree.c > CMakeFiles/untitled.dir/NTree.c.i
 
-CMakeFiles/untitled.dir/simplelinkedlist.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/untitled.dir/simplelinkedlist.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/usuario/CLionProjects/untitled/simplelinkedlist.c -o CMakeFiles/untitled.dir/simplelinkedlist.c.s
+CMakeFiles/untitled.dir/NTree.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/untitled.dir/NTree.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/usuario/CLionProjects/untitled/NTree.c -o CMakeFiles/untitled.dir/NTree.c.s
 
 # Object files for target untitled
 untitled_OBJECTS = \
 "CMakeFiles/untitled.dir/main.c.o" \
-"CMakeFiles/untitled.dir/NTree.c.o" \
+"CMakeFiles/untitled.dir/lista.c.o" \
 "CMakeFiles/untitled.dir/TElemento.c.o" \
-"CMakeFiles/untitled.dir/simplelinkedlist.c.o"
+"CMakeFiles/untitled.dir/NTree.c.o"
 
 # External object files for target untitled
 untitled_EXTERNAL_OBJECTS =
 
 untitled: CMakeFiles/untitled.dir/main.c.o
-untitled: CMakeFiles/untitled.dir/NTree.c.o
+untitled: CMakeFiles/untitled.dir/lista.c.o
 untitled: CMakeFiles/untitled.dir/TElemento.c.o
-untitled: CMakeFiles/untitled.dir/simplelinkedlist.c.o
+untitled: CMakeFiles/untitled.dir/NTree.c.o
 untitled: CMakeFiles/untitled.dir/build.make
 untitled: CMakeFiles/untitled.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/usuario/CLionProjects/untitled/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking C executable untitled"

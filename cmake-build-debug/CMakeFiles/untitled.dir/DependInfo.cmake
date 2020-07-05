@@ -6,8 +6,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_C
   "/home/usuario/CLionProjects/untitled/NTree.c" "/home/usuario/CLionProjects/untitled/cmake-build-debug/CMakeFiles/untitled.dir/NTree.c.o"
   "/home/usuario/CLionProjects/untitled/TElemento.c" "/home/usuario/CLionProjects/untitled/cmake-build-debug/CMakeFiles/untitled.dir/TElemento.c.o"
+  "/home/usuario/CLionProjects/untitled/lista.c" "/home/usuario/CLionProjects/untitled/cmake-build-debug/CMakeFiles/untitled.dir/lista.c.o"
   "/home/usuario/CLionProjects/untitled/main.c" "/home/usuario/CLionProjects/untitled/cmake-build-debug/CMakeFiles/untitled.dir/main.c.o"
-  "/home/usuario/CLionProjects/untitled/simplelinkedlist.c" "/home/usuario/CLionProjects/untitled/cmake-build-debug/CMakeFiles/untitled.dir/simplelinkedlist.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

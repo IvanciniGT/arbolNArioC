@@ -1,5 +1,3 @@
-#ifndef TELEMENTO_H
-#define TELEMENTO_H
 #include <stdio.h>
 #include <string.h>
 
@@ -15,5 +13,3 @@ void asignar(TElemento* copia, TElemento original);
 int igual(TElemento* uno, TElemento* dos);
 
 TElemento* crear(char* n);
-
-#endif

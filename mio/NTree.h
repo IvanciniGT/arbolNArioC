@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "lista.h"
+#include "simplelinkedlist.h"
 
 typedef struct NodeNTree{
         TElemento info;
@@ -11,12 +11,8 @@ typedef struct NodeNTree{
 
 typedef TNodeNTree* TNTree;  // Identificar el raiz
 
-TNodeNTree* buscarNodo(TNodeNTree* actual, TElemento elemento);
 
-
-
-TNTree crearArbolVacio(TNTree* a);
-//void crearArbolVacio(TNTree* a);
+void crearArbolVacio(TNTree* a);
 void anadirRaiz(TNTree* a, TElemento e);
 void anadirHijo(TNTree* a, TElemento infoPadre, TElemento infoHijo);
 void anadirHermano(TNTree* a, TElemento h, TElemento e);
@@ -26,7 +22,7 @@ int esArbolVacio(TNTree a);
 int numeroHojas(TNTree a);
 int numeroNodos(TNTree a);
 int altura(TNTree a);
-TElemento* parent(TNTree a, TElemento e);
+TElemento* padre(TNTree a, TElemento e);
 TLinkedList listaHijos(TNTree arbol, TElemento elemento);
 TLinkedList listaHermanos(TNTree arbol, TElemento elemento) ;
 TLinkedList listaAntepasados(TNTree arbol, TElemento elemento) ;

@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/untitled.dir/NTree.c.o"
   "CMakeFiles/untitled.dir/TElemento.c.o"
+  "CMakeFiles/untitled.dir/lista.c.o"
   "CMakeFiles/untitled.dir/main.c.o"
-  "CMakeFiles/untitled.dir/simplelinkedlist.c.o"
   "untitled"
   "untitled.pdb"
 )

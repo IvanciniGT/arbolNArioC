@@ -94,13 +94,13 @@
 		<Unit filename="/home/usuario/CLionProjects/untitled/TElemento.h">
 			<Option target="untitled"/>
 		</Unit>
+		<Unit filename="/home/usuario/CLionProjects/untitled/lista.c">
+			<Option target="untitled"/>
+		</Unit>
+		<Unit filename="/home/usuario/CLionProjects/untitled/lista.h">
+			<Option target="untitled"/>
+		</Unit>
 		<Unit filename="/home/usuario/CLionProjects/untitled/main.c">
-			<Option target="untitled"/>
-		</Unit>
-		<Unit filename="/home/usuario/CLionProjects/untitled/simplelinkedlist.c">
-			<Option target="untitled"/>
-		</Unit>
-		<Unit filename="/home/usuario/CLionProjects/untitled/simplelinkedlist.h">
 			<Option target="untitled"/>
 		</Unit>
 		<Unit filename="/home/usuario/CLionProjects/untitled/CMakeLists.txt">

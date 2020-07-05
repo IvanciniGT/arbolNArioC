@@ -1,1 +1,1 @@
-/usr/bin/cc -g   CMakeFiles/untitled.dir/main.c.o CMakeFiles/untitled.dir/NTree.c.o CMakeFiles/untitled.dir/TElemento.c.o CMakeFiles/untitled.dir/simplelinkedlist.c.o  -o untitled 
+/usr/bin/cc -g   CMakeFiles/untitled.dir/main.c.o CMakeFiles/untitled.dir/lista.c.o CMakeFiles/untitled.dir/TElemento.c.o CMakeFiles/untitled.dir/NTree.c.o  -o untitled 

@@ -177,6 +177,33 @@ TElemento.c.s:
 	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/TElemento.c.s
 .PHONY : TElemento.c.s
 
+lista.o: lista.c.o
+
+.PHONY : lista.o
+
+# target to build an object file
+lista.c.o:
+	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/lista.c.o
+.PHONY : lista.c.o
+
+lista.i: lista.c.i
+
+.PHONY : lista.i
+
+# target to preprocess a source file
+lista.c.i:
+	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/lista.c.i
+.PHONY : lista.c.i
+
+lista.s: lista.c.s
+
+.PHONY : lista.s
+
+# target to generate assembly for a file
+lista.c.s:
+	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/lista.c.s
+.PHONY : lista.c.s
+
 main.o: main.c.o
 
 .PHONY : main.o
@@ -204,33 +231,6 @@ main.c.s:
 	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/main.c.s
 .PHONY : main.c.s
 
-simplelinkedlist.o: simplelinkedlist.c.o
-
-.PHONY : simplelinkedlist.o
-
-# target to build an object file
-simplelinkedlist.c.o:
-	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/simplelinkedlist.c.o
-.PHONY : simplelinkedlist.c.o
-
-simplelinkedlist.i: simplelinkedlist.c.i
-
-.PHONY : simplelinkedlist.i
-
-# target to preprocess a source file
-simplelinkedlist.c.i:
-	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/simplelinkedlist.c.i
-.PHONY : simplelinkedlist.c.i
-
-simplelinkedlist.s: simplelinkedlist.c.s
-
-.PHONY : simplelinkedlist.s
-
-# target to generate assembly for a file
-simplelinkedlist.c.s:
-	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/simplelinkedlist.c.s
-.PHONY : simplelinkedlist.c.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -246,12 +246,12 @@ help:
 	@echo "... TElemento.o"
 	@echo "... TElemento.i"
 	@echo "... TElemento.s"
+	@echo "... lista.o"
+	@echo "... lista.i"
+	@echo "... lista.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
-	@echo "... simplelinkedlist.o"
-	@echo "... simplelinkedlist.i"
-	@echo "... simplelinkedlist.s"
 .PHONY : help
 
 

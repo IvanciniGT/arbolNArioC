@@ -2,9 +2,18 @@
 #include <stdlib.h>
 #include "NTree.h"
 
-int maximo(int a, int b){
-    return a>b?a:b;
-}
+/*
+ *                           A
+ *             B                           C
+ *         E        F                   G     H
+ */
+// Nos pasan A y H
+    // Nos pasan B y H
+        // Nos pasan E y H
+            // Nos pasan NULL y H ACABO Devolviendo NULL
+            // Nos pasan F y H
+                // Miro el hijo de F: NULL. Devuelve NULL
+                // Miro el hermano de F: NULL. Devuelve NULL
 
 TNodeNTree* buscarNodo(TNodeNTree* actual, TElemento elemento){
     // Buscamos el elemento al que añadirle un hijo
@@ -23,20 +32,46 @@ TNodeNTree* buscarNodo(TNodeNTree* actual, TElemento elemento){
 
 TNodeNTree* crearNodo(TNodeNTree* padre, TElemento info){
     TNodeNTree* nodo = (TNodeNTree*) malloc(sizeof(TNodeNTree));
-    asignar(&nodo->info, info);
-    //asignar(nodo->info, &info);
+    asignar(&(nodo->info), info);
     nodo->hermano=NULL;
     nodo->hijo=NULL;
     nodo->padre=padre;
-
     return nodo;
 }
 
+int max(int a, int b){
+    return a>b?a:b;
+}
 
+/*
+        while (nodo != NULL) {
+            // Miramos si yo soy el padre
+            if (nodo->info != padre) {
+                // Hemos encontrado el padre
+                anadirHijo(&nodo->hijo, padre, hijo);
+                return;
+            }
+            // Vamos recorriendo los elementos del nivel a ver si está aqui el padre
 
-TNTree crearArbolVacio(TNTree* a){
+            // En este nivel no estaba el padre
+            if (aux3->hijo != NULL) {
+                anadirHijo(&aux3->hijo, padre, hijo);
+            }
+            if (aux3->hermano != NULL) {
+                anadirHijo(&aux3->hermano, padre, hijo);
+            }
+            if (nodo->info != padre) {
+                // Hemos encontrado el padre
+                anadirHijo(&nodo->hijo, padre, hijo);
+                return;
+            }
+            nodo = nodo->hermano;
+        }
+    }
+}
+*/
+void crearArbolVacio(TNTree* a){
     *a=NULL;
-    return *a;
 }
 void anadirRaiz(TNTree* a, TElemento info){
     TNodeNTree* nodo = crearNodo(NULL, info);
@@ -47,16 +82,12 @@ void anadirHijo(TNTree* a, TElemento infoPadre, TElemento infoHijo){
     TNodeNTree* padre = buscarNodo(*a, infoPadre);
     // Vamos a ver si he encontrado algo
     if(padre != NULL){
-        TNodeNTree *nodo = crearNodo(padre, infoHijo);
         // Busco el ultimo hijo y le añado un hermnano
         TNodeNTree* ultimoHijo = padre -> hijo;
-        if(ultimoHijo==NULL){
-            padre->hijo=nodo;
-        }else {
-            while (ultimoHijo->hermano != NULL)
-                ultimoHijo = ultimoHijo->hermano;
-            ultimoHijo->hermano = nodo;
-        }
+        while (ultimoHijo-> hermano != NULL)
+            ultimoHijo = ultimoHijo -> hermano;
+        TNodeNTree* nodo = crearNodo(padre, infoHijo);
+        ultimoHijo -> hermano=nodo;
     }
 }
 void anadirHermano(TNTree* a, TElemento infoHermano, TElemento infoNuevo){
@@ -99,7 +130,11 @@ TNodeNTree* copiarNodo(TNodeNTree* original, TNodeNTree* padre){
     }
     return nuevo;
 }
-
+/*
+ *              A                                A'
+ *          B      C                        B'       C'?
+ *        D   E
+ */
 void copiarArbol(TNTree original, TNTree* copia){
     if (esArbolVacio(original)){
         crearArbolVacio(copia);
@@ -118,11 +153,7 @@ int numeroHojas(TNTree a){
     }else if (a->hijo==NULL){
         return 1;
     }else{
-        int hojasHijo;
-        int hojasHermano;
-        hojasHijo=numeroHojas(a->hijo);
-        hojasHermano=a->hijo->hermano!=NULL ? numeroHojas(a->hijo->hermano):0;
-        return hojasHijo+hojasHermano;
+        return numeroHojas(a->hijo) + numeroHojas(a->hermano);
     }
 }
 int numeroNodos(TNTree a){
@@ -132,20 +163,16 @@ int numeroNodos(TNTree a){
         return 1 + numeroNodos(a->hijo)+ numeroNodos(a->hermano);
     }
 }
-//  A
-// B C
 int altura(TNTree a){
     if (esArbolVacio(a)){
         return 0;
     }else{
-        int miAltura=1+altura(a->hijo);
-        int alturaHermano=0;
-        if(a->hermano!=NULL)
-            alturaHermano=altura(a->hermano);
-        return maximo(miAltura,alturaHermano);
+        int miAltura=altura(a->hijo);
+        int alturaHermano=altura(a->hermano);
+        return 1+max(miAltura,alturaHermano);
     }
 }
-TElemento* parent(TNTree arbol, TElemento elemento){
+TElemento* padre(TNTree arbol, TElemento elemento){
     TNodeNTree* nodo=buscarNodo(arbol,  elemento);
     if(esArbolVacio(nodo)){
         return NULL;
@@ -161,18 +188,17 @@ TLinkedList listaHijos(TNTree arbol, TElemento elemento) {
         TNodeNTree *aux;
         aux = nodo->hijo;
         TElemento* e=crear(aux->info.info);
-        insertar(*e, list);
         while (aux->hermano != NULL) {
             aux = aux->hermano;
-            asignar(e, (aux->info));
-            insertarFinal(*e, list);
+            asignar(e, aux->info);
+            insertar(*e, list);
         }
     }
     return *list;
 }
 TLinkedList listaHermanos(TNTree arbol, TElemento elemento) {
-    TElemento* padre=parent(arbol,elemento);
-    TLinkedList lista= listaHijos(arbol, *padre);
+    TElemento* _padre=padre(arbol,elemento);
+    TLinkedList lista= listaHijos(arbol, *_padre);
     eliminar (elemento, &lista);
     return lista;
 }
@@ -183,8 +209,9 @@ TLinkedList listaAntepasados(TNTree arbol, TElemento elemento){
     TNodeNTree* aux;
     aux=nodo;
     while(aux->padre!=NULL){
+        asignar(&elemento, aux->info);
         aux=aux->padre;
-        insertar(aux->info, lista);
+        insertar(elemento, lista);
     }
     return *lista;
 }   
@@ -209,27 +236,25 @@ void borrarNodo(TNTree* arbol,TElemento elemento){
         if(nodo->hermano != NULL){
             nodo->padre->hijo=nodo->hermano;
         }else{
-            // No tengo hermanos
+            // Era hijo unico!!!!
             nodo->padre->hijo = NULL;
         }
     }else{
-        // No soy el primogenito
+        // No soy el primogenito ;)
         TNodeNTree* anterior=nodo->padre->hijo;
         while(anterior->hermano!=nodo){
-            // No es mi hermano anterior
+            // No es mi hermano anterior... sigue rascando
             anterior=anterior->hermano;
         }
-        // Ya he localizado al hermano anterior
+        // Aqui si ya tengo al hermano anterior
         if(nodo->hermano==NULL) {
-            // Era el ultimo de la familia
+            // Era el ultimo de la familia... me borro
             anterior->hermano=NULL;
         }else{
-            // No era ni primero ni ultimo
+            // Yo estaba por en madio...
             anterior->hermano=nodo->hermano;
         }
     }
-    
-
     free(nodo);
     nodo=NULL;
 }
